@@ -1,4 +1,5 @@
 			<header class="clearfix">
-				<h1>{{ with .Site.Params.title }}{{ . | markdownify }}{{ end }}</h1>
-				<span>{{ with .Site.Params.subtitle }}{{ . | markdownify }}{{ end }}</span>
+				{{ with .Site.Params.title }}<h1>{{ . | markdownify }}</h1>{{ end }}
+				{{ if isset .Site.Params "parent_link" }}<h5><a href="{{.Site.Params.parent_link}}">{{ .Site.Params.parent_link_text | markdownify }}</a></h5>{{ end }}
+				{{ with .Site.Params.subtitle }}<span>{{ . | markdownify }}</span>{{ end }}
 			</header>

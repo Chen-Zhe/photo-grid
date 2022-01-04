@@ -58,6 +58,11 @@ a {
 	font-weight: 700;
 }
 
+.container > header h5 {
+	padding-bottom: 0.3em;
+	text-align: right;
+}
+
 .container > header span {
 	display: block;
 	font-weight: 300;

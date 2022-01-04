@@ -49,7 +49,7 @@
 }
 
 .og-expander-inner {
-	padding: 50px 30px;
+	padding: 30px;
 	height: 100%;
 }
 
@@ -235,7 +235,6 @@ ul.exif > li {
 @media screen and (max-width: 830px) {
 
 	.stamp { font-size: 0.8em; border: 0.3rem double #555; }
-	.og-expander-inner { padding: 30px; }
 	.og-expander h3 { font-size: 28px; padding: 10px 0px; }
 	.og-expander p, ul.exif { font-size: 13px; }
 	.og-expander a { font-size: 12px; }

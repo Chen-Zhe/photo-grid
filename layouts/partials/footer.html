@@ -1,7 +1,7 @@
 <footer>
 	<p>{{ .Site.Params.copyright_text }} © {{ .Site.Params.copyright_since_year }} - {{ now.Format "2006" }} {{ .Site.Params.author }}</p>
-	<p>{{ with .Site.Params.footertext }}{{ . | markdownify }}{{ end }}</p>
+	{{ with .Site.Params.footertext }}<p>{{ . | markdownify }}</p>{{ end }}
 	<p class="credits">Built with <a href="https://gohugo.io/" target="_blank">Hugo</a>
-	| Theme <a href="https://themes.gohugo.io/photo-grid/" target="_blank">Photo-Grid</a> by Chen Zhe
+	| Theme: <a href="https://themes.gohugo.io/photo-grid/" target="_blank">Photo-Grid</a> by Chen Zhe
 	</p>
 </footer>

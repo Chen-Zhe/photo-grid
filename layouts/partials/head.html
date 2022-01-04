@@ -19,7 +19,7 @@
 			color: {{ .Site.Params.bodytextcolor }};
 		}
 		</style>
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" />
+		<link rel="stylesheet" type="text/css" href="{{ .Site.Params.font_face_link }}" />
 		<link rel="stylesheet" type="text/css" href="{{ (resources.Get "css/default.css" | minify).RelPermalink }}" />
 		<link rel="stylesheet" type="text/css" href="{{ (resources.Get "css/component.css" | minify).RelPermalink }}" />
 		{{ range .Site.Params.custom_css }}

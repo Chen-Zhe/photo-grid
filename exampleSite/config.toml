@@ -16,6 +16,8 @@ theme = "photo-grid"
     description = "Photo Grid - Grid Gallery For Hugo"
     keywords = "Hugo, Hugo theme, grid theme, gallery"
 
+    font_face_link = "https://fonts.googleapis.com/css?family=Lato:300,400,700"
+
     # Body background and  text color
     bodybgcolor = "#3d3d3d"
     bodytextcolor = "#f2f2f2"

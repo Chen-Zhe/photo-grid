@@ -195,7 +195,6 @@
 }
 
 ul.exif {
-  list-style-type: square;
   -webkit-column-width: 180px;
   -moz-column-width: 180px;
   column-width: 180px;
@@ -203,15 +202,33 @@ ul.exif {
   -moz-column-count: 2;
   column-count: 2;
 	text-align: left;
-	padding: 10px;
+	padding: 10px 21px;
 	margin: 0;
-	
 }
 
 ul.exif > li {
 	height: auto;
 	display: list-item;
 	margin: 0;
+}
+
+ul.exif > li.camera {
+	list-style-type: '📷 ';
+}
+ul.exif > li.lens {
+	list-style-type: '🔍 ';
+}
+ul.exif > li.datetime {
+	list-style-type: '🗓️ ';
+}
+ul.exif > li.iso {
+	list-style-type: '🎞️ ';
+}
+ul.exif > li.exposure {
+	list-style-type: '⏱️ ';
+}
+ul.exif > li.fnumber {
+	list-style-type: '💿 ';
 }
 
 @-webkit-keyframes loader {

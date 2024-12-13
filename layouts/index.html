@@ -22,18 +22,18 @@
 						data-exif="{{ if in (slice "jpg" "jpeg" "tiff" "tif") $image.MediaType.SubType }}
 						{{- with $image.Exif -}}
 							{{- with .Tags -}}
-								<li>{{- if isset . "Model" }}{{ if not (hasPrefix (lower .Model) (lower .Make)) }}{{ .Make }} {{ end }}{{ .Model }}
+								<li class='camera'>{{- if isset . "Model" }}{{ if not (hasPrefix (lower .Model) (lower .Make)) }}{{ .Make }} {{ end }}{{ .Model }}
 									{{- else }}{{ if isset $image.Params "composite" }}{{ $image.Params.composite }}
 									{{- else }}Composite Photo{{ end }}{{ end }}</li>
 								{{- if isset . "LensModel" -}}
-								<li>{{- if not (hasPrefix (lower .LensModel) (lower .Make)) }}{{ .LensModel }}
-									{{- else }}{{ substr .LensModel (len .Make)}}{{ end }} @ {{ .FocalLength }}mm</li>
+								<li class='lens'>{{- if not (hasPrefix (lower .LensModel) (lower .Make)) }}{{ .LensModel }}
+									{{- else }}{{ substr .LensModel (math.Add (len .Make) 1)}}{{ end }} @ {{ lang.FormatNumber 1 .FocalLength }}mm</li>
 								{{- end }}
-								{{- with .ExposureTime }}<li>S.S. {{ . }}s</li>{{ end }}
-								{{- with .FNumber }}<li>A. f/{{ . }}</li>{{ end }}
-								{{- with .ISOSpeedRatings }}<li>ISO {{ . }}</li>{{ end }}
+								<li class='datetime'>{{ if isset $image.Params "timestamp" }} {{ $image.Params.timestamp }} {{ else }}{{ $image.Exif.Date.Format "2006/1/2 15:04" }}{{ end }}</li>
+								{{- with .ISO }}<li class='iso'>ISO {{ . }}</li>{{ end }}
+								{{- with .ExposureTime }}<li class='exposure'>{{ . }}s</li>{{ end }}
+								{{- with .FNumber }}<li class='fnumber'>f/{{ lang.FormatNumber 1 . }}</li>{{ end }}
 							{{- end -}}
-								<li>Taken at {{ if isset $image.Params "timestamp" }} {{ $image.Params.timestamp }} {{ else }}{{ .Date.Format "2006-1-2 15:04" }}{{ end }}</li>
 							{{- end }}
 							{{- end }}"{{ end }}>
 							{{- if $isVideo -}}

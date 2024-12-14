@@ -25,7 +25,7 @@ html { height: 100%; }
     *zoom: 1;
 }
 
-body {
+html, body {
     font-family: 'Lato', Arial, Calibri, sans-serif;
     font-weight: 300;
     font-size: 15px;

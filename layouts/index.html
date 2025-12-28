@@ -2,7 +2,7 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 	<head>
 	{{ partial "head.html" . }}
-	{{ template "_internal/google_analytics.html" . }}
+	{{- partial "google_analytics.html" . -}}
 	</head>
 	<body>
 		<div class="container">	

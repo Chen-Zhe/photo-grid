@@ -29,8 +29,12 @@ html, body {
     font-family: 'Lato', Arial, Calibri, sans-serif;
     font-weight: 300;
     font-size: 15px;
-    overflow: scroll;
     overflow-x: hidden;
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: hsl(0, 0%, 85%) transparent;
 }
 
 a {

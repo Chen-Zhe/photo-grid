@@ -5,7 +5,7 @@
 	{{- partial "google_analytics.html" . -}}
 	</head>
 	<body>
-		<div class="container">	
+		<div class="container">
 				{{ partial "header.html" . }}
 			<div class="main">
 				<ul id="og-grid" class="og-grid">
@@ -32,7 +32,7 @@
 								<li class='datetime'>{{ if isset $image.Params "timestamp" }} {{ $image.Params.timestamp }} {{ else }}{{ $image.Exif.Date.Format "2006-1-2 15:04" }}{{ end }}</li>
 								{{- with .ISO }}<li class='iso'>ISO {{ . }}</li>{{ end }}
 								{{- with .ExposureTime }}<li class='exposure'>{{ . }}s</li>{{ end }}
-								{{- with .FNumber }}<li class='fnumber'>f/{{ lang.FormatNumber 1 . }}</li>{{ end }}
+								{{- with .FNumber }}<li class='fnumber'>ƒ/{{ lang.FormatNumber 1 . }}</li>{{ end }}
 							{{- end -}}
 							{{- end }}
 							{{- end }}"{{ end }}>
